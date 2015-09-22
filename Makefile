@@ -9,9 +9,9 @@ ifeq (test_one,$(firstword $(MAKECMDGOALS)))
 endif
 
 clean:
-	find -name '*.pyc' -delete
-	find -name '*~' -delete
-	find -name '__pycache__' -type d -delete
+	find . -name '*.pyc' -delete
+	find . -name '*~' -delete
+	find . -name '__pycache__' -type d -delete
 	rm -rf .coverage build
 
 collectstatic: clean
